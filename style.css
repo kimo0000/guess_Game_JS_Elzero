@@ -1,0 +1,169 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: #eee;
+  height: 100vh;
+}
+.wrapper {
+  margin: 10px auto;
+  width: 80%;
+  max-width: 850px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.game_area {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.game_area .list_try {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.list_try .try {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.try span {
+  font-size: 22px;
+  font-weight: 700;
+  color: #777;
+}
+.try.disable_input {
+  opacity: 0.5;
+  pointer-events: none;
+}
+/* .inputs {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+} */
+.try input {
+  width: 40px;
+  height: 40px;
+  border-bottom: 2px solid #333;
+  outline: 1px solid #ddd;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+}
+.yes_in_place {
+  background-color: orange;
+  color: #fff;
+}
+.yes_not_in_place {
+  background-color: #eee;
+  color: #333;
+}
+.wrong_leter {
+  background: #333;
+  color: #fff;
+}
+.btns {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 15px; */
+  grid-area: 10px;
+}
+.btns button {
+  padding: 10px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+.btns .check_guess {
+  width: 70%;
+  background-color: orange;
+}
+.btns .check_guess.disable_btn {
+  pointer-events: none;
+  user-select: none;
+  cursor: not-allowed;
+}
+.btns .hint {
+  width: 25%;
+  background-color: blueviolet;
+}
+.btns .hint.disable_btn {
+  pointer-events: none;
+  user-select: none;
+  cursor: not-allowed;
+}
+.btns button {
+  opacity: 0.5;
+}
+.btns button:hover {
+  opacity: 1;
+  transition: 0.3s;
+}
+.message {
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+}
+.message span {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  color: orange;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.game_roles {
+  padding: 50px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.game_roles div {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+.game_roles span {
+  /* display: block; */
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.game_roles .succes_letter span {
+  background-color: orange;
+}
+.game_roles .letter_not_in_place span {
+  background-color: #ddd;
+}
+.game_roles .wrong_letter span {
+  background-color: #333;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  background: #000;
+  padding: 25px;
+  line-height: 25px;
+}
